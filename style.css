@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container{
+    background-color: #fff;
+    width: auto;
+    display: flex;  
+    border-radius: 20px;
+    position: relative; 
+    width: 800px;
+    min-height: 400px;
+}
+
+.left{
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.right{
+    width: 50%;
+    padding: 60px 60px 60px 10px;
+    width: 50%;
+}
+
+#woman, #box, #shadow{
+    position: absolute;
+}
+
+#woman{
+    width: 400px;
+    top: 50%;
+    left: -16%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+#box{
+    top: 58%;
+    left: -85px;
+    transform: translateY(-50%);
+    width: 140px;
+    z-index: 3;
+}
+
+#shadow{
+    width: 800px;
+    z-index: 1; 
+    top: 40%;
+    left: -115%;
+    transform: translateY(-50%);
+}
+
+
+h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    cursor: pointer;
+}
+
+li .title:hover{
+    color: hsl(14, 88%, 65%);
+}
+
+.title{
+    color: hsl(238, 29%, 16%);
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text{
+    display: none;
+    margin-bottom: 20px;
+    color: hsl(240, 6%, 50%);
+    animation: open 0.1s;
+}
+
+@keyframes open {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width:910px) {
+    body{
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 300px;
+        min-height: 0;
+        height: auto;
+        margin-top: 100px;
+    }
+
+    .left {
+        overflow: visible;
+    }
+
+    #woman, #box, #shadow{
+        position: absolute;
+        width: 200px;
+        top: -15px;
+        left: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    #box{
+        width: 75px;
+        left: 80px;
+        top: 5px;
+    }
+
+    .right {
+        width: 100%;
+        text-align: center;
+        padding: 100px 20px 30px 20px;
+    }
+
+    .text{
+        text-align: left;
+    }
+}
+
+
+
